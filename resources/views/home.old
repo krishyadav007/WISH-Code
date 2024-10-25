@@ -1,0 +1,29 @@
+ @extends('layouts.app')
+
+@section('content')
+<section class="wrapper bg-light py-14 py-md-16">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">{{ __('Head to') }}</div>
+
+                    <div class="card-body">
+                        @if(session('status'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('status') }}
+                            </div>
+                        @endif
+                        <ul class="icon-list bullet-bg bullet-soft-primary">
+                            <li><a href="{{ route('track.dashy') }}" class="more hover">Tracks
+                                    dashboard</a></li>
+                            <li><a href="{{ route('team.dashy') }}" class="more hover">Team
+                                    dashboard</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@endsection -->
